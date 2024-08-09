@@ -15,7 +15,7 @@ const SalonCrousal = () => {
 
     const salonGroups = [
         [
-            { href: '/salon/Harsha Rakesh', imgSrc: '/carousel-logos/7.png' },
+            { href: '/salon/Harsha Rakesh', imgSrc: '/luzologo/1.png' },
             { href: '/salon/Bodycraft', imgSrc: '/Logos-Website/2.jpg' }
         ],
         [
@@ -23,11 +23,11 @@ const SalonCrousal = () => {
             { href: '/salon/bodycraft', imgSrc: '/Logos-Website/4.png' },
         ],
         [
-            { href: '/salon/Toni and Guy', imgSrc: '/carousel-logos/10.png' },
-            { href: '/salon/juice', imgSrc: '/Logos-Website/4.png' },
+            { href: '/salon/Toni and Guy', imgSrc: '/luzologo/4.png' },
+            { href: '/salon/juice', imgSrc: '/luzologo/juice.png' },
         ],
         [
-            { href: '/salon/Aveda x Nykaa', imgSrc: '/carousel-logos/17.png' },
+            { href: '/salon/Aveda x Nykaa', imgSrc: '/luzologo/11.png' },
             { href: '/salon/juice', imgSrc: '/Logos-Website/6.png' },
         ],
         [
@@ -35,44 +35,47 @@ const SalonCrousal = () => {
             { href: '/salon/Femina Flaunt', imgSrc: '/Logos-Website/9.png' }
         ],
         [
-            { href: '/salon/juice', imgSrc: '/Logos-Website/10.png' },
+            { href: '/salon/juice', imgSrc: '/luzologo/10.png' },
             { href: '/salon/bodycraft', imgSrc: '/Logos-Website/11.png' }
         ],
         [
             { href: '/salon/Nailashes', imgSrc: '/Logos-Website/12.png' },
-            { href: '/salon/bodycraft', imgSrc: '/carousel-logos/11.png' }
+            { href: '/salon/bodycraft', imgSrc: '/luzologo/5.png' }
         ],
         [
-            { href: '/salon/juice', imgSrc: '/Logos-Website/14.png' },
+            { href: '/salon/juice', imgSrc: '/luzologo/11.png' },
             { href: '/salon/LookWell', imgSrc: '/Logos-Website/15.png' }
         ],
         [
-            { href: '/salon/Cut and Style', imgSrc: '/carousel-logos/12.png' },
+            { href: '/salon/Cut and Style', imgSrc: '/luzologo/6.png' },
             { href: '/salon/bodycraft', imgSrc: '/Logos-Website/17.png' }
         ],
         [
-            { href: '/salon/Kapils', imgSrc: '/carousel-logos/8.png' },
-            { href: '/salon/bodycraft', imgSrc: '/carousel-logos/15.png' }
+            { href: '/salon/Kapils', imgSrc: '/luzologo/2.png' },
+            { href: '/salon/bodycraft', imgSrc: '/luzologo/9.png' }
         ],
         [
-            { href: '/salon/juice', imgSrc: '/carousel-logos/13.png' },
-            { href: '/salon/Tip and Toe', imgSrc: '/carousel-logos/14.png' }
+            { href: '/salon/juice', imgSrc: '/luzologo/7.png' },
+            { href: '/salon/Tip and Toe', imgSrc: '/luzologo/8.png' }
+        ],
+        [
+            { href: '/salon/juice', imgSrc: '/luzologo/14.png' },
+            { href: '/salon/Tip and Toe', imgSrc: '/luzologo/13.png' }
         ],
         // Add more salon groups here
     ];
 
 
-
     return (
-        <div className=' px-[10px] my-[30px] sm:my-[60px] 2xl:max-w-[1300px] xl:max-w-[1200px] lg:max-w-[1000px] sm:mx-auto relative'>
-            {/* <h1 className='font-bold sm:text-[30px] text-[20px] mb-4 text-[#051036] '>700+ Salons | Spas | Dermatologists</h1> */}
+        <div className='  my-[30px] sm:my-[60px] 2xl:max-w-[1300px] xl:max-w-[1200px] lg:max-w-[1000px] sm:mx-auto relative'>
+            <h1 className='font-bold px-3 text-[30px]  mb-4 text-[#051036] '>700+ Salons | Spas | Dermatologists</h1>
             {/* <div> */}
 
             <div className='flex gap-[20px]'>
                 <button className='prev'><ChevronLeft /></button>
                 <Swiper
                     slidesPerView={3}
-                    spaceBetween={20}
+                    spaceBetween={1}
                     navigation={{ nextEl: ".next", prevEl: ".prev" }}
                     loop={true}
 
@@ -82,7 +85,7 @@ const SalonCrousal = () => {
                         disableOnInteraction: false
                     }}
                     breakpoints={{
-                        // When window width is <= 640px (for mobile devices)
+                        // When window width is <= 640px (for deskotop devices)
                         640: {
                             slidesPerView: 4,
                         },
@@ -94,7 +97,7 @@ const SalonCrousal = () => {
                             <div className='flex flex-col gap-[20px]'>
                                 {group.map((salon, idx) => (
                                     <Link key={idx} href={salon.href}>
-                                        <Image src={salon.imgSrc} width={324} height={182} alt='salon' className='aspect-video rounded-md' />
+                                        <Image src={salon.imgSrc} width={324} height={182} alt='salon' className='sm:aspect-video sm:w-full sm:h-full rounded-md' />
                                     </Link>
                                 ))}
                             </div>
